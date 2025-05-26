@@ -29,6 +29,10 @@ body * {
   scroll-snap-stop: always;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   color: inherit;
 }
