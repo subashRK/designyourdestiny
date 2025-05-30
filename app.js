@@ -20,3 +20,23 @@ bgImage.onload = () => {
     })
   }
 }
+
+setTimeout(
+  () =>
+    setInterval(() => {
+      const activeP_El = document.querySelector(
+        "main .content .text .questions p.visible"
+      )
+      let nextP_el
+
+      if (activeP_El.nextElementSibling == null)
+        nextP_el = document.querySelector(
+          "main .content .text .questions p:first-child"
+        )
+      else nextP_el = activeP_El.nextElementSibling
+
+      activeP_El.classList.toggle("visible", false)
+      nextP_el.classList.toggle("visible", true)
+    }, 3000),
+  1000
+)
