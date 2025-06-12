@@ -17,6 +17,7 @@
 
 html {
   overflow-y: hidden; /* To make sure scroll snap works well */
+  color: var(--text-c);
 }
 
 body {
@@ -71,12 +72,12 @@ section {
   z-index: 1000;
   background-color: transparent;
   backdrop-filter: blur(3px);
-  color: var(--text-c);
   padding: 15px 40px;
   gap: clamp(40px, 12vw, 300px);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .nav .toggle {
@@ -150,15 +151,29 @@ main .content .intersecting {
   transition-delay: var(--transition-time);
 }
 
+main .content .sample-report {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: var(--text-c);
+  color: rgba(230, 230, 230, 0.8);
+}
+main .content .sample-report.intersecting {
+  opacity: 0.95;
+}
+
 main .content .text {
   --h1-c: rgba(245, 222, 179, 0.9);
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 main .content .text .questions {
   color: var(--h1-c);
-  margin-top: 25px;
+  margin-top: 35px;
   position: relative;
 }
 
