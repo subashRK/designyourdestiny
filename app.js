@@ -43,6 +43,7 @@ setTimeout(
   1000
 )
 
-navTogglerEl.addEventListener("click", () =>
+navTogglerEl.addEventListener("click", () => {
   navLinksEl.classList.toggle("open")
-)
+  navTogglerEl.classList.toggle("open")
+})
