@@ -1,5 +1,7 @@
 // Elements Refs
 const mainEl = document.querySelector("main")
+const navTogglerEl = document.querySelector(".nav .toggle")
+const navLinksEl = document.querySelector(".nav .links")
 // End of elements refs
 
 const bgImage = new Image()
@@ -39,4 +41,8 @@ setTimeout(
       nextP_el.classList.toggle("visible", true)
     }, 3000),
   1000
+)
+
+navTogglerEl.addEventListener("click", () =>
+  navLinksEl.classList.toggle("open")
 )
