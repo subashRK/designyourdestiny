@@ -279,18 +279,37 @@ main footer {
 #DMIT .explanation {
   width: 100%;
   margin-top: 20px;
+  color: var(--text-c);
 }
 
 #DMIT .explanation h3 {
   font-size: 2.5rem;
   text-align: center;
-  color: var(--text-c);
   background-color: rgb(245, 222, 179, 0.7);
   backdrop-filter: blur(10px);
   padding: 15px;
   border-radius: 10px;
   width: 100%;
   border-bottom: 2px solid var(--text-c);
+}
+#DMIT .explanation .qa {
+  margin-top: 50px;
+  padding: 0px 25px;
+}
+#DMIT .explanation .qa li {
+  margin-bottom: 75px;
+}
+#DMIT .explanation .qa h4 {
+  font-size: 1.6rem;
+}
+#DMIT .explanation .qa .answer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+#DMIT .explanation .qa .answer p {
+  font-size: 1.4rem;
 }
 
 /* Media Queries */
