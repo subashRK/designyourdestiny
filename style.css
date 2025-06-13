@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --text-c: #dab58a;
+  --sec-c: #dab58a;
   --transition-time: 1s;
   --padding-space: 20px;
+  --text-c: #112a46;
 }
 
 *,
@@ -12,12 +13,14 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
 
 html {
   overflow-y: hidden; /* To make sure scroll snap works well */
-  color: var(--text-c);
+  color: var(--sec-c);
+  overflow-x: hidden;
 }
 
 body {
@@ -34,7 +37,7 @@ body [data-scroll-snap="true"] {
   scroll-snap-stop: always;
 }
 
-body::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
@@ -45,9 +48,14 @@ a {
 
 section {
   width: 100vw;
-  max-width: 1250px;
+  max-width: 1000px;
   margin: auto;
-  padding: 0px var(--padding-space);
+  padding: 25px var(--padding-space);
+}
+
+section h2 {
+  font-size: 2.8rem;
+  text-align: center;
 }
 
 /* Hidden transition styles */
@@ -106,7 +114,7 @@ section {
 .nav .links .link::after {
   content: "";
   position: absolute;
-  background-color: var(--text-c);
+  background-color: var(--sec-c);
   bottom: 2px;
   left: 0px;
   width: 100%;
@@ -155,8 +163,8 @@ main .content .sample-report {
   margin-top: 25px;
   padding: 10px 25px;
   border-radius: 25px;
-  background-color: var(--text-c);
-  color: rgba(230, 230, 230, 0.8);
+  background-color: var(--sec-c);
+  color: var(--text-c);
 }
 main .content .sample-report.intersecting {
   opacity: 0.95;
@@ -222,6 +230,49 @@ main footer {
   justify-content: center;
   flex-direction: column;
   animation: scroll-available 2s infinite;
+}
+
+/* DMIT Section */
+#DMIT {
+  --theme: var(--sec-c);
+  color: var(--theme);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  position: relative;
+}
+#DMIT::before,
+#DMIT::after {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-color: var(--theme);
+  z-index: -1;
+  opacity: 0.7;
+  border-radius: 15px;
+  animation: rotation infinite linear 25s;
+}
+#DMIT::before {
+  top: 0%;
+  left: 0%;
+  translate: -50% 100%;
+  rotate: 45deg;
+}
+#DMIT::after {
+  bottom: 0%;
+  right: 0%;
+  translate: 50% 0%;
+  rotate: 45deg;
+}
+
+#DMIT .introduction-video {
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.9);
+  object-fit: scale-down;
+  border-radius: 7px;
 }
 
 /* Media Queries */
@@ -300,5 +351,14 @@ main footer {
 
   100% {
     translate: 0% 0%;
+  }
+}
+
+@keyframes rotation {
+  from {
+    rotate: 45deg;
+  }
+  to {
+    rotate: 405deg;
   }
 }

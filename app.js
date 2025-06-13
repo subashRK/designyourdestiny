@@ -2,6 +2,7 @@
 const mainEl = document.querySelector("main")
 const navTogglerEl = document.querySelector(".nav .toggle")
 const navLinksEl = document.querySelector(".nav .links")
+const navLinkEls = document.querySelectorAll(".nav .links .link")
 // End of elements refs
 
 const bgImage = new Image()
@@ -47,3 +48,10 @@ navTogglerEl.addEventListener("click", () => {
   navLinksEl.classList.toggle("open")
   navTogglerEl.classList.toggle("open")
 })
+
+navLinkEls.forEach(el =>
+  el.addEventListener("click", () => {
+    navLinksEl.classList.toggle("open", false)
+    navTogglerEl.classList.toggle("open", false)
+  })
+)
