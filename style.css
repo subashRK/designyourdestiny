@@ -64,7 +64,7 @@ section h2 {
   opacity: 0;
 }
 .transition.up {
-  translate: 0% 10%;
+  translate: 0% 30%;
 }
 .intersecting {
   transition: var(--transition-time);
@@ -217,6 +217,13 @@ h1 .main-text {
   margin-bottom: -7.5px;
   color: var(--h1-c);
   font-size: 4.5rem;
+}
+
+h1.transition.up {
+  translate: 0% 10%;
+}
+h1.intersecting.up {
+  translate: 0% 0%;
 }
 
 main footer {
