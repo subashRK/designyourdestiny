@@ -424,10 +424,15 @@ main footer {
 }
 
 #testimonials .card.active {
-	transition-delay: 0.325s;
+	transition-delay: 0.4s;
 	scale: 1 1.1;
 	z-index: 2;
 	border: 1px solid var(--text-c);
+}
+
+/* About Us */
+#about-us h2 {
+	text-shadow: 3px 3px 0px wheat;
 }
 
 /* Media Queries */
