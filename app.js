@@ -3,6 +3,8 @@ const mainEl = document.querySelector("main")
 const navTogglerEl = document.querySelector(".nav .toggle")
 const navLinksEl = document.querySelector(".nav .links")
 const navLinkEls = document.querySelectorAll(".nav .links .link")
+const cardsEl = document.querySelector("#testimonials .cards")
+const activeCardEl = document.querySelector("#testimonials .cards .card.active")
 // End of elements refs
 
 const bgImage = new Image()
@@ -55,3 +57,9 @@ navLinkEls.forEach(el =>
     navTogglerEl.classList.toggle("open", false)
   })
 )
+
+cardsEl.scrollBy({
+  behavior: "smooth",
+  left:
+    cardsEl.firstElementChild.clientWidth * parseInt(activeCardEl.dataset["i"]),
+})

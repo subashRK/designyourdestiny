@@ -5,6 +5,7 @@
   --transition-time: 1s;
   --padding-space: 20px;
   --text-c: #112a46;
+  --max-w: 1000px;
 }
 
 *,
@@ -48,7 +49,7 @@ a {
 
 section {
   width: 100vw;
-  max-width: 1000px;
+  max-width: var(--max-w);
   margin: auto;
   padding: 25px var(--padding-space);
 }
@@ -66,12 +67,19 @@ section h2 {
 .transition.up {
   translate: 0% 30%;
 }
+.transition.up.low-up {
+  translate: 0% 10%;
+}
 .intersecting {
   transition: var(--transition-time);
   transition-property: opacity;
   opacity: 1;
 }
 .intersecting.up {
+  transition-property: opacity, translate;
+  translate: 0% 0%;
+}
+.intersecting.up.low-up {
   transition-property: opacity, translate;
   translate: 0% 0%;
 }
@@ -217,13 +225,7 @@ h1 .main-text {
   margin-bottom: -7.5px;
   color: var(--h1-c);
   font-size: 4.5rem;
-}
-
-h1.transition.up {
-  translate: 0% 10%;
-}
-h1.intersecting.up {
-  translate: 0% 0%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 main footer {
@@ -249,6 +251,7 @@ main footer {
   width: 100%;
   height: 500px;
   position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 #DMIT .introduction-video::before,
 #DMIT .introduction-video::after {
@@ -285,38 +288,115 @@ main footer {
 
 #DMIT .explanation {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 35px;
   color: var(--text-c);
 }
 
 #DMIT .explanation h3 {
   font-size: 2.5rem;
+  font-weight: normal;
   text-align: center;
-  background-color: rgb(245, 222, 179, 0.7);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  border-radius: 10px;
-  width: 100%;
-  border-bottom: 2px solid var(--text-c);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 #DMIT .explanation .qa {
   margin-top: 50px;
   padding: 0px 25px;
 }
-#DMIT .explanation .qa li {
+#DMIT .explanation .qa > li {
   margin-bottom: 75px;
 }
 #DMIT .explanation .qa h4 {
   font-size: 1.6rem;
 }
 #DMIT .explanation .qa .answer {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  margin-left: 20px;
   margin-top: 20px;
 }
 #DMIT .explanation .qa .answer p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Testimonials page */
+#testimonials {
+  color: var(--text-c);
+  background: radial-gradient(wheat, #f7cd9d);
+  padding: 35px 0px;
+  max-width: 100vw;
+}
+
+#testimonials h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+  padding: 0px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#testimonials .cards-container {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#testimonials .cards-container .mover-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#testimonials .cards-container .mover-container .mover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 10px;
+  transition: background-color 0.25s;
+}
+#testimonials .cards-container .mover-container .mover:hover {
+  background-color: rgba(150, 150, 150, 0.3);
+}
+#testimonials .cards-container .mover-container .mover:disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#testimonials .cards {
+  padding: 30px 0px;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+#testimonials .card {
+  scroll-snap-align: center;
+  padding: 25px;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  min-width: 90%;
+  max-width: 90%;
+  z-index: 1;
+  background-color: white;
+  transition: border 0.25s, scale 0.25s;
+}
+#testimonials .card.active {
+  scale: 1.01 1.1;
+  z-index: 2;
+  border: 1px solid var(--text-c);
 }
 
 /* Media Queries */
@@ -378,6 +458,12 @@ main footer {
 
   .nav .links.open {
     translate: 0 0;
+  }
+
+  #DMIT .introduction-video::before,
+  #DMIT .introduction-video::after {
+    width: 100px;
+    height: 100px;
   }
 }
 
