@@ -299,17 +299,20 @@ main footer {
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 #DMIT .explanation .qa {
-	margin-top: 50px;
+	margin-top: 60px;
 	padding: 0px 25px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 #DMIT .explanation .qa > li {
 	margin-bottom: 75px;
+	width: 35%;
 }
 #DMIT .explanation .qa h4 {
 	font-size: 1.6rem;
 }
 #DMIT .explanation .qa .answer {
-	margin-left: 20px;
 	margin-top: 20px;
 }
 #DMIT .explanation .qa .answer p {
@@ -363,10 +366,10 @@ main footer {
 	border-radius: 50%;
 	padding: 10px;
 	margin-right: 10px;
-	transition: background-color 0.25s;
+	transition: background-color 0.25s, box-shadow 0.25s;
 }
-#testimonials .cards-container .mover-container .mover:hover {
-	background-color: rgba(150, 150, 150, 0.3);
+#testimonials .cards-container .mover-container .mover:hover:not(:disabled) {
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 #testimonials .cards-container .mover-container .mover:disabled {
 	background-color: rgba(0, 0, 0, 0.1);
@@ -496,10 +499,22 @@ main footer {
 		translate: 0 0;
 	}
 
+	#DMIT .explanation .qa {
+		display: block;
+	}
+
+	#DMIT .explanation .qa > li {
+		width: 100%;
+	}
+
 	#DMIT .introduction-video::before,
 	#DMIT .introduction-video::after {
 		width: 100px;
 		height: 100px;
+	}
+
+	#testimonials .cards .card.active {
+		scale: 1 1.05;
 	}
 }
 
