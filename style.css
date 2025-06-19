@@ -323,7 +323,7 @@ main footer {
 /* Testimonials page */
 #testimonials {
 	color: var(--text-c);
-	background: radial-gradient(wheat, #f7cd9d);
+	background: radial-gradient(circle at center, #f3c49c, #d19e73);
 	padding: 35px 0px;
 	max-width: 100vw;
 }
@@ -335,8 +335,9 @@ main footer {
 	padding: 0px 20px;
 	color: rgba(255, 255, 255, 0.7);
 	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+	position: relative;
+	z-index: 0;
 }
 
 #testimonials .cards-container {
