@@ -1,7 +1,7 @@
 // Elements Refs
 const mainEl = document.querySelector("main")
 const navTogglerEl = document.querySelector(".nav .toggle")
-const navLinksEl = document.querySelector(".nav .links")
+const navEl = document.querySelector(".nav")
 const navLinkEls = document.querySelectorAll(".nav .links .link")
 const cardsEl = document.querySelector("#testimonials .cards")
 const activeCardEl = document.querySelector("#testimonials .cards .card.active")
@@ -49,16 +49,10 @@ setTimeout(
 	1000
 )
 
-navTogglerEl.addEventListener("click", () => {
-	navLinksEl.classList.toggle("open")
-	navTogglerEl.classList.toggle("open")
-})
+navTogglerEl.addEventListener("click", () => navEl.classList.toggle("open"))
 
 navLinkEls.forEach((el) =>
-	el.addEventListener("click", () => {
-		navLinksEl.classList.toggle("open", false)
-		navTogglerEl.classList.toggle("open", false)
-	})
+	el.addEventListener("click", () => navEl.classList.toggle("open"))
 )
 
 cardsEl.scrollBy({

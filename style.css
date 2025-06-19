@@ -532,17 +532,23 @@ main footer {
 		z-index: 1002;
 	}
 
-	.nav .toggle:not(.open) .open-i {
+	.nav:not(.open) .toggle .open-i {
 		display: block;
 	}
-	.nav .toggle:not(.open) .close-i {
+	.nav:not(.open) .toggle .close-i {
 		display: none;
 	}
-	.nav .toggle.open .open-i {
+	.nav.open .toggle .open-i {
 		display: none;
 	}
-	.nav .toggle.open .close-i {
+	.nav.open .toggle .close-i {
 		display: block;
+	}
+	.nav.open {
+		color: var(--sec-c);
+	}
+	.nav.open .links .link::after {
+		background-color: var(--sec-c);
 	}
 
 	.nav .links {
@@ -562,7 +568,7 @@ main footer {
 		transition: 0.5s translate;
 	}
 
-	.nav .links.open {
+	.nav.open .links {
 		translate: 0 0;
 	}
 
