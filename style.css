@@ -307,10 +307,11 @@ main footer {
 	font-size: 1.6rem;
 }
 #DMIT .explanation .qa .answer {
-	list-style: none;
+	margin-left: 12px;
 	margin-top: 20px;
 }
 #DMIT .explanation .qa .answer p {
+	margin-bottom: 20px;
 	font-size: 1.2rem;
 }
 
@@ -519,7 +520,7 @@ main footer {
 }
 
 #about-me footer a {
-	color: rgb(240, 228, 206);
+	color: rgb(245, 228, 196);
 	text-decoration: underline;
 }
 
@@ -592,15 +593,6 @@ main footer {
 
 	#DMIT .explanation .qa {
 		display: block;
-	}
-
-	#DMIT .explanation .qa .answer {
-		list-style: circle;
-		padding-left: 10px;
-	}
-
-	#DMIT .explanation .qa .answer p {
-		margin-bottom: 12px;
 	}
 
 	#DMIT .explanation .qa > li {
