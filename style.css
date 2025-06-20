@@ -292,13 +292,6 @@ main footer {
 	color: var(--text-c);
 }
 
-#DMIT .explanation h3 {
-	display: none;
-	font-size: 2.5rem;
-	font-weight: normal;
-	text-align: center;
-	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
 #DMIT .explanation .qa {
 	margin-top: 60px;
 	padding: 0px 25px;
@@ -308,17 +301,17 @@ main footer {
 }
 #DMIT .explanation .qa > li {
 	margin-bottom: 75px;
-	width: 35%;
+	width: 40%;
 }
 #DMIT .explanation .qa h4 {
 	font-size: 1.6rem;
 }
 #DMIT .explanation .qa .answer {
+	list-style: none;
 	margin-top: 20px;
 }
 #DMIT .explanation .qa .answer p {
 	font-size: 1.2rem;
-	margin-bottom: 15px;
 }
 
 /* Testimonials page */
@@ -572,12 +565,17 @@ main footer {
 		translate: 0 0;
 	}
 
-	#DMIT .explanation h3 {
+	#DMIT .explanation .qa {
 		display: block;
 	}
 
-	#DMIT .explanation .qa {
-		display: block;
+	#DMIT .explanation .qa .answer {
+		list-style: circle;
+		padding-left: 10px;
+	}
+
+	#DMIT .explanation .qa .answer p {
+		margin-bottom: 12px;
 	}
 
 	#DMIT .explanation .qa > li {
@@ -588,6 +586,10 @@ main footer {
 	#DMIT .introduction-video::after {
 		width: 100px;
 		height: 100px;
+	}
+
+	#testimonials {
+		background: radial-gradient(wheat, #f7cd9d);
 	}
 
 	#testimonials .cards .card.active {
