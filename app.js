@@ -93,5 +93,3 @@ function handleMoverClick({ currentTarget }) {
 }
 
 moverEls.forEach((el) => el.addEventListener("click", handleMoverClick))
-
-console.log(Email)

@@ -135,6 +135,7 @@ section h2 {
 	height: 2px;
 	scale: 0 1;
 	transition: 0.15s scale;
+	z-index: 99;
 }
 
 .nav .links .link:hover::after {
