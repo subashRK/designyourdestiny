@@ -297,7 +297,7 @@ main footer {
 	padding: 0px 25px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 #DMIT .explanation .qa > li {
 	margin-bottom: 75px;
