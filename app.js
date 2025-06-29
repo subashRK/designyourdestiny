@@ -8,6 +8,7 @@ const activeCardEl = document.querySelector("#testimonials .cards .card.active")
 const moverEls = document.querySelectorAll(
 	"#testimonials .cards-container .mover"
 )
+const logoFirstImgEl = document.querySelector(".nav .logo:first-child")
 // End of elements refs
 
 const bgImage = new Image()
@@ -29,25 +30,25 @@ bgImage.onload = () => {
 	}
 }
 
-setTimeout(
-	() =>
-		setInterval(() => {
-			const activeP_El = document.querySelector(
-				"main .content .text .questions p.visible"
+setTimeout(() => {
+	setInterval(() => {
+		const activeP_El = document.querySelector(
+			"main .content .text .questions p.visible"
+		)
+		let nextP_el
+
+		if (activeP_El.nextElementSibling == null)
+			nextP_el = document.querySelector(
+				"main .content .text .questions p:first-child"
 			)
-			let nextP_el
+		else nextP_el = activeP_El.nextElementSibling
 
-			if (activeP_El.nextElementSibling == null)
-				nextP_el = document.querySelector(
-					"main .content .text .questions p:first-child"
-				)
-			else nextP_el = activeP_El.nextElementSibling
+		activeP_El.classList.toggle("visible", false)
+		nextP_el.classList.toggle("visible", true)
+	}, 3000)
 
-			activeP_El.classList.toggle("visible", false)
-			nextP_el.classList.toggle("visible", true)
-		}, 3000),
-	1000
-)
+	setInterval(() => logoFirstImgEl.classList.toggle("hidden"), 5000)
+}, 1000)
 
 navTogglerEl.addEventListener("click", () => navEl.classList.toggle("open"))
 
