@@ -47,7 +47,7 @@ setTimeout(() => {
 		nextP_el.classList.toggle("visible", true)
 	}, 3000)
 
-	setInterval(() => logoFirstImgEl.classList.toggle("hidden"), 5000)
+	setInterval(() => logoFirstImgEl.classList.toggle("hidden"), 4000)
 }, 1000)
 
 navTogglerEl.addEventListener("click", () => navEl.classList.toggle("open"))
