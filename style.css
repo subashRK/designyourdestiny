@@ -186,7 +186,7 @@ main .content.transition {
 }
 main .content.intersecting {
 	transition-property: background-color, backdrop-filter;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.4);
 	backdrop-filter: blur(3px);
 }
 
