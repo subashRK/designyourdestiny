@@ -113,6 +113,34 @@ section h2 {
 	position: relative;
 	height: var(--size);
 	width: var(--size);
+	cursor: pointer;
+	animation: shake linear infinite 20s;
+}
+
+.nav .logo-container::before {
+	content: "Book";
+	color: var(--text-c);
+	cursor: pointer;
+	font-size: 1rem;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	padding-top: 3px;
+	padding-left: 12.5px;
+	width: calc(100% + 45px);
+	height: calc(100%);
+	border-radius: 25px;
+	outline: 3px solid var(--pri-c);
+	background-color: var(--pri-c);
+	transition: 0.25s box-shadow;
+	animation: book-animation linear infinite 20s;
+}
+
+.nav .logo-container:hover::before {
+	box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav .logo {
@@ -186,7 +214,7 @@ main .content.transition {
 }
 main .content.intersecting {
 	transition-property: background-color, backdrop-filter;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(3px);
 }
 
@@ -716,5 +744,90 @@ main footer {
 	}
 	to {
 		rotate: 405deg;
+	}
+}
+
+@keyframes book-animation {
+	0% {
+		width: 100%;
+	}
+
+	2.5% {
+		/* 0.5s */
+		width: calc(100% + 45px);
+	}
+
+	47.5% {
+		width: calc(100% + 45px);
+	}
+
+	50% {
+		width: 100%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+/* 
+@keyframes shake {
+	0% {
+		translate: 0% 0%;
+	}
+
+	9.5% {
+		translate: 0px 0px;
+	}
+	13% {
+		translate: 10px 0px;
+	}
+	16.5% {
+		translate: 0px 0px;
+	}
+	20% {
+		translate: -10px;
+	}
+	23.5% {
+		translate: 0px 0px;
+	}
+	27% {
+		translate: 10px 0px;
+	}
+	30.5% {
+		translate: 0px 0px;
+	}
+	33.5% {
+		translate: -10px 0px;
+	}
+	37% {
+		translate: 0px;
+	}
+	40.5% {
+		translate: 10px 0px;
+	}
+	43.5% {
+		translate: 0px 0px;
+	}
+} */
+
+@keyframes shake {
+	0% {
+		translate: 0% 0%;
+	}
+
+	19% {
+		translate: 0px 0px;
+	}
+	19.5% {
+		translate: 3px 0px;
+	}
+	20% {
+		translate: 0px 0px;
+	}
+	20.5% {
+		translate: -3px 0px;
+	}
+	21% {
+		translate: 0px 0px;
 	}
 }
