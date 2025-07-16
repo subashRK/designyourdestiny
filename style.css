@@ -114,7 +114,11 @@ section h2 {
 	height: var(--size);
 	width: var(--size);
 	cursor: pointer;
-	animation: shake linear infinite 20s;
+	animation: shake linear infinite 10s;
+}
+
+.nav .logo-container:hover::before {
+	animation: unset;
 }
 
 .nav .logo-container::before {
@@ -133,8 +137,8 @@ section h2 {
 	width: calc(100% + 45px);
 	height: calc(100%);
 	border-radius: 25px;
-	outline: 3px solid var(--pri-c);
-	background-color: var(--pri-c);
+	outline: 3px solid var(--sec-c);
+	background-color: var(--sec-c);
 	transition: 0.25s box-shadow;
 	animation: book-animation linear infinite 20s;
 }
@@ -815,19 +819,31 @@ main footer {
 		translate: 0% 0%;
 	}
 
+	18% {
+		translate: 0px 0px;
+	}
+	18.5% {
+		translate: 2px 0px;
+	}
 	19% {
 		translate: 0px 0px;
 	}
 	19.5% {
-		translate: 3px 0px;
+		translate: -2px 0px;
 	}
 	20% {
 		translate: 0px 0px;
 	}
 	20.5% {
-		translate: -3px 0px;
+		translate: 2px 0px;
 	}
 	21% {
+		translate: 0px 0px;
+	}
+	21.5% {
+		translate: -2px 0px;
+	}
+	22% {
 		translate: 0px 0px;
 	}
 }
