@@ -200,6 +200,7 @@ main {
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow-y: hidden;
+	--main-c: #e6b6dc;
 }
 
 main .content {
@@ -266,8 +267,6 @@ main .content .text .questions p.visible {
 }
 
 h1 {
-	--h1-c: #e6b6dc;
-
 	font-size: 3rem;
 	color: rgba(245, 245, 245, 0.9);
 	word-spacing: 3px;
@@ -276,7 +275,7 @@ h1 {
 
 h1 .main-text {
 	margin-bottom: -7.5px;
-	color: var(--h1-c);
+	color: var(--main-c);
 	font-size: 4.5rem;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -773,46 +772,6 @@ main footer {
 		width: 100%;
 	}
 }
-/* 
-@keyframes shake {
-	0% {
-		translate: 0% 0%;
-	}
-
-	9.5% {
-		translate: 0px 0px;
-	}
-	13% {
-		translate: 10px 0px;
-	}
-	16.5% {
-		translate: 0px 0px;
-	}
-	20% {
-		translate: -10px;
-	}
-	23.5% {
-		translate: 0px 0px;
-	}
-	27% {
-		translate: 10px 0px;
-	}
-	30.5% {
-		translate: 0px 0px;
-	}
-	33.5% {
-		translate: -10px 0px;
-	}
-	37% {
-		translate: 0px;
-	}
-	40.5% {
-		translate: 10px 0px;
-	}
-	43.5% {
-		translate: 0px 0px;
-	}
-} */
 
 @keyframes shake {
 	0% {
