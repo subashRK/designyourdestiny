@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-	--pri-c: #c896e1;
-	--sec-c: #c4a4ff;
+	--pri-c: #c5d86d;
+	--sec-c: #d5e68d;
 	--transition-time: 1s;
 	--padding-space: 20px;
-	--text-c: #540c54;
+	--text-c: #1a4107;
 	--max-w: 1000px;
 }
 
@@ -21,7 +21,6 @@
 
 html {
 	overflow-y: hidden; /* To make sure scroll snap works well */
-	color: var(--sec-c);
 	overflow-x: hidden;
 }
 
@@ -87,6 +86,8 @@ section h2 {
 /* End of Hidden transition styles */
 
 .nav {
+	--theme: #a6b75a;
+
 	position: fixed;
 	width: 100vw;
 	top: 0%;
@@ -100,7 +101,7 @@ section h2 {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	color: lightgray;
+	color: var(--theme);
 }
 
 .nav .toggle {
@@ -137,8 +138,8 @@ section h2 {
 	width: calc(100% + 45px);
 	height: calc(100%);
 	border-radius: 25px;
-	outline: 3px solid var(--sec-c);
-	background-color: var(--sec-c);
+	outline: 3px solid var(--theme);
+	background-color: var(--theme);
 	transition: 0.25s box-shadow;
 	animation: book-animation linear infinite 20s;
 }
@@ -179,7 +180,7 @@ section h2 {
 .nav .links .link::after {
 	content: "";
 	position: absolute;
-	background-color: lightgray;
+	background-color: var(--theme);
 	bottom: 2px;
 	left: 0px;
 	width: 100%;
@@ -200,7 +201,7 @@ main {
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow-y: hidden;
-	--main-c: #e6b6dc;
+	--main-c: var(--pri-c);
 }
 
 main .content {
@@ -219,7 +220,7 @@ main .content.transition {
 }
 main .content.intersecting {
 	transition-property: background-color, backdrop-filter;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(3px);
 }
 
@@ -291,7 +292,7 @@ main footer {
 
 /* DMIT Section */
 #DMIT {
-	--theme: var(--pri-c);
+	--theme: #9cab7a;
 	color: var(--theme);
 	display: flex;
 	flex-direction: column;
@@ -370,7 +371,7 @@ main footer {
 /* Testimonials page */
 #testimonials {
 	color: var(--text-c);
-	background: radial-gradient(#e6b6dc, #de99cf);
+	background: radial-gradient(#cfe6b6, #afde99);
 	padding: 35px 0px;
 	max-width: 100vw;
 }
@@ -483,7 +484,7 @@ main footer {
 #about-me {
 	max-width: 100vw;
 	min-width: 100vw;
-	background: url("./assets/about-us.png");
+	background: url("./assets/about-bg.png");
 	background-size: cover;
 	padding-bottom: 0px;
 }
@@ -543,7 +544,7 @@ main footer {
 
 #about-me .content .text h3 {
 	font-size: 3rem;
-	text-shadow: 3px 3px 0px var(--sec-c);
+	text-shadow: 3px 3px 0px var(--pri-c);
 }
 
 #about-me .content .text .contact {
@@ -576,7 +577,7 @@ main footer {
 }
 
 #about-me footer a {
-	color: #e6b6dc;
+	color: var(--text-c);
 	text-decoration: underline;
 }
 
@@ -639,13 +640,6 @@ main footer {
 
 	.nav.open .links {
 		translate: 0 0;
-	}
-
-	.nav.open {
-		color: var(--pri-c);
-	}
-	.nav.open .links .link::after {
-		background-color: var(--pri-c);
 	}
 
 	#DMIT .explanation .qa {

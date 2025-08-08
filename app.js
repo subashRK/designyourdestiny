@@ -12,7 +12,7 @@ const logoFirstImgEl = document.querySelector(".nav .logo:first-child")
 // End of elements refs
 
 const bgImage = new Image()
-const BG_IMG_SRC = "./assets/background.jpg"
+const BG_IMG_SRC = "./assets/background.png"
 bgImage.src = BG_IMG_SRC
 
 bgImage.onload = () => {
