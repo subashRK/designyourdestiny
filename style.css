@@ -86,7 +86,7 @@ section h2 {
 /* End of Hidden transition styles */
 
 .nav {
-	--theme: #6f7a3c;
+	--theme: rgb(225, 225, 225);
 
 	position: fixed;
 	width: 100vw;
